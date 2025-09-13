@@ -2,7 +2,7 @@
 #import "@local/utils:0.1.0" : *
 #import "@preview/mannot:0.2.2": markrect
 
-#show: doc_aufranc.with(title:"Kholle 5",fontsize: 12pt, numbering: none)
+#show: doc_aufranc.with(title:"Kholle 6",fontsize: 12pt, numbering: none)
 
 = Questions de cours
 
