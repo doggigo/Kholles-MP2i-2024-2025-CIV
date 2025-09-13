@@ -1,6 +1,8 @@
 # Programmes de Khôlles
 _Année 2024-2025, MP2i, CIV de Valbonne_
 
+[🗒️Les PDFs](./dist/)
+
 Prérequis (pour recompiler) :
 - [typst](https://typst.app/)
 - [utils](https://github.com/doggigo/typst-utils)
