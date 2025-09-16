@@ -4,6 +4,8 @@
 
 #show: doc_aufranc.with(title:"Kholle 8",fontsize: 12pt, numbering: none)
 
+#set enum(numbering: "1)")
+
 = Questions de cours
 
 == Ensemble des points d'affixes $z$ tels que $M(z), M(z^2), M(z^3)$ forment un triangle rectangle en $M(z)$.
@@ -11,7 +13,7 @@
   En utilisant la condition d'orthogonalité :
 
 La condition est réalisée lorsque :
-$ (z^3 - z)/(z^2 - z) = (z(z+1)(z-1))/(z(z-1)) = z +  1 in CC without RR $
+$ (z^3 - z)/(z^2 - z) = (z(z+1)(z-1))/(z(z-1)) = z +  1 "est un imaginaire pur" $
 L'ensemble des points recherchés est donc la droite verticale passant par $(-1,0)$ privée de ce point.
 ]
 
@@ -19,13 +21,37 @@ L'ensemble des points recherchés est donc la droite verticale passant par $(-1,
 #blocky-paragraph[
   Rapport réel : le point $B$ est une solution, les autres sont tels que $A,B "et" M$ soient distincts et alignés, c'est donc finalement la droite $(A B)$ privée du point (A).
 
-  Rapport imaginaire pur : le point $B$ est encore solution, les autres sont tels que $arrow(B M)$ et $arrow(A M)$ sont orthogonaux, c'est donc finalement le cercle de diamètre $A B$ privé du point $A$. On peut aussi le retrouver en posant $z = alpha + i beta$ avec $alpha, beta$ réels.
+  Rapport imaginaire pur : le point $B$ est encore solution, les autres sont tels que $arrow(B M)$ et $arrow(A M)$ sont orthogonaux, c'est donc finalement le cercle de diamètre $A B$ privé du point $A$. (On peut aussi le retrouver en posant $z = alpha + i beta$ avec $alpha, beta$ réels.)
   
   
-  // À expliquer un peu mieux..
+  // Peut-etre montrer comment faire, du coups..
 ]
 
 == Théorème de réduction d'une similitude directe
+#smallcaps[Énoncé]
+#context-block[
+  Une similitude directe $z |-> a z + b$ est :
+  + soit une translation si $a = 1$
+  + soit admet un unique point fixe $Omega$ d'affixe $omega = b/(1-a)$, et c'est alors une composée commutative de la rotation de centre $Omega$ et d'angle $arg(a)$ et de l'homothétie de centre $Omega$, de rapport $|a|$
+]
+#smallcaps[Preuve]
+#blocky-paragraph[
+  Si $a = 1$, pas de question.
+
+  Sinon :
+  Supposons donc $a != 1$. L'équation $z = a z + b$ admet une unique solution, la transformation géométriqque associée transforme donc un unique point en lui-même, on dit que c'est son unique point fixe, d'affixe $omega = b/(1-a)$
+  #v(1em)
+  On peut alors déduire de : $display(cases(omega = a omega + b, z' = a z + b))$
+  #h(1em) 
+  
+  Que : $(z' - omega) = a(z-omega) <==> z' = |a|e^(i arg(a))(z-omega) + omega$.
+  #v(1em)
+  C'est donc bien la composée :
+  - d'une rotation ($z |-> omega + e^(i theta)(z - omega)$)
+  
+  - et d'une homothétie ($z |-> omega + lambda(z-omega)$, #h(.3em) $lambda in RR$)
+]
+Le vecteur $arrow(Omega(omega)M(z))$ est donc transformé en $arrow(Omega(omega)M(z'))$
 
 = Théorèmes à citer
 == Théorème pour l'exponentielle complexe
@@ -52,11 +78,28 @@ L'ensemble des points recherchés est donc la droite verticale passant par $(-1,
 ]
 
 == Alignement et Orthogonalité
+#context-block[
+  _#serif("Alignement :")_
+
+  Soit trois points distincts $A,B$ et $C$ du plan complexe, d'affixes respectives $a,b$ et $c$.
+
+  Ces trois points sont alignés si, et seulement si, $display((c-a)/(b-a))$ est réel.
+
+  _#serif("Orthogonalité :")_
+
+  Soit deux vecteurs $arrow(u)$ et $arrow(v)$ d'affixes respectives $u$ et $v$.
+
+  Ces deux vecteurs sont orthogonaux si, et seulement si, $u overline(v)$ est imaginaire pur.
+
+  En particulier, soit $A(a), B(b) "et" C(c)$ trois points distincts du plan complexe :
+  
+  Alors $arrow(A B)$ et $arrow(A C)$ sont orthogonaux ssi : $display((c-a)/(b-a))$ est imaginaire pur.
+]
 
 == Théorème de réduction d'une similitude
 #context-block[
   _La réduction d'une similitude directe est déjà dans la partie questions de cours_
-
-  _Pour la similitude indirecte :_
-  
+  Une similitude directe $z |-> a z + b$ est :
+  + soit une translation et une symétrie axiale sur l'axe des abscisses si $a = 1$
+  + soit admet un unique point fixe $Omega$ d'affixe $omega = b/(1-a)$, et c'est alors une composée commutative de la symétrie axiale sur l'axe des abscisses de la rotation de centre $Omega$ et d'angle $arg(a)$ et de l'homothétie de centre $Omega$, de rapport $|a|$
 ]
