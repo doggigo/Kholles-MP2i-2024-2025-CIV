@@ -122,10 +122,10 @@ $ ch(x) = (e^x + e^(-x))/2 #h(2em) sh(x) = (e^x - e^(-x))/2 $
   $ p(x) &= a(x^2 + b/a x + c/a) $
   Puis, pour mettre sous la forme canonique, on fait apparaître le début d'un carré :
   $ p(x) &= a((x + b/(2a))^2 + (-b^2/(4a^2) + c/a)) = a((x - (-b)/(2a))^2 +((-b^2 + 4 a c)/(4a^2))) $
-  en posant $alpha = -b/(2a)$ et $beta = (-b^2 + 4a c)/(4a^2)$,
+  en posant $alpha = -b/(2a)$ et $beta = (-b^2 + 4a c)/(4a)$,
   on obtient la forme canonique d'un trinôme du second degré : $p(x) = a(x-alpha)^2 + beta$.
   
-  _On sait alors que p admet un extremum en $alpha$, avec $f(alpha) = beta$._
+  _On sait alors que p admet un extremum en $alpha$, avec $p(alpha) = beta$._
 
   #smallcaps[Relations coefficient-racine]
   #v(.5em)
